@@ -14,15 +14,21 @@
 		CHAR: 	是固定长度字符串，其长度范围为0~255且与编码方式无关，无论字符实际长度是多少，都会按照指定长度存储，不够的用空格补足
 		REAL: 	值是一个浮点值，存储为 8 字节的 IEEE 浮点数字。
  **/
+
+// 查询条件转对象
 const getQueryStringArgs = (url: string) => {
   const qs = url.split('?')[1] //location.search.length ? location.search.substring(1) : ''
   const args = {}
+  // 参数
   const items = qs.length ? qs.split('&') : []
   let item = null
   let name = null
   let value = null
+
+  // items: ['a=1', 'b=2']
   items.forEach(sreachItem => {
     item = sreachItem.split('=')
+    // 将url encodeURIComponent编码解码
     name = decodeURIComponent(item[0])
     value = decodeURIComponent(item[1])
     if (name.length) {
@@ -57,6 +63,7 @@ const handleSearchPage = (url: string, _body: {}) => {
   console.log('get参数---', param)
   // 行对象 { id: 1, name: 'Jack', age: 2 }
   const offset = (param['pageIndex'] - 1) * param['pageSize']
+
   // 连接数据库
   const db = require('better-sqlite3')('../database.db', { verbose: console.log })
   // TODO：扩展分页  LIMIT ? OFFSET ?
@@ -141,7 +148,7 @@ export const handleAdd = (_url: string, body: {}) => {
   //   { name: 'ganxiaobo1', age: 20 },
   //   { name: 'ganxiaobo1', age: 30 },
   // ]
-	
+
   // // 连接数据库
   // const db = require('better-sqlite3')('../database.db', { verbose: console.log })
   // //创建插入语句
