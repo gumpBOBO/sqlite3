@@ -20,7 +20,9 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    // Option 'suppressImplicitAnyIndexErrors' is deprecated and will stop functioning in TypeScript 5.5. Specify compilerOption '"ignoreDeprecations": "5.0"' to silence this error
     "suppressImplicitAnyIndexErrors": true,
+    "ignoreDeprecations": "5.0",
     // 检查函数是否不含有隐式返回值
     "noImplicitReturns": true,
     "experimentalDecorators": true,
