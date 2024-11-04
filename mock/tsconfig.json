@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "tslib": ["node_modules/tslib/tslib.d.ts"]
+    },
+    "outDir": "./dist",
+    "module": "commonjs",
+    "target": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    // 校验模式
+    "strict": false,
+    // 不允许使用隐式any类型
+    "noImplicitAny": false,
+    // 报告未使用得函数参数
+    "noUnusedParameters": true,
+    // 报告未使用得局部变量
+    "noUnusedLocals": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "suppressImplicitAnyIndexErrors": true,
+    // 检查函数是否不含有隐式返回值
+    "noImplicitReturns": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "sourceMap": true
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
+}
