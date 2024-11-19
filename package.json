@@ -6,7 +6,9 @@
     "lint:fix": "eslint --ext .ts,tsx,vue src/** --no-error-on-unmatched-pattern --fix",
     "mock": "cd mock && ts-node-dev mock.ts",
     "test": "jest",
-    "test:unit": "jest --coverage"
+    "test:unit": "jest --coverage",
+    "dev": "cd mock && ts-node-dev mock.ts",
+    "build": "cd mock && ts-node-dev mock.ts"
   },
   "dependencies": {
     "better-sqlite3": "^9.4.3",
