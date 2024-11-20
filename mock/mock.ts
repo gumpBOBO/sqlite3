@@ -17,7 +17,7 @@ app.use(cors())
 const router = new koaRouter()
 
 // 接口 3300
-const port = 3300
+const port = 3008
 const log4 = log4js.getLogger()
 log4.level = 'debug'
 
@@ -64,5 +64,6 @@ app.on('error', (err, ctx: Context) => {
 })
 
 app.listen(port, () => {
+  console.log(`${port}项目启动`)
   log4.debug('mock server running at: http://localhost:%d', port)
 })

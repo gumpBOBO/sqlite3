@@ -1,14 +1,14 @@
 {
   "version": "0.0.0",
   "name": "uni-preset-vue",
+  "main": "index.html",
   "scripts": {
     "lint": "eslint --ext .ts,tsx,vue src/** --no-error-on-unmatched-pattern --quiet",
     "lint:fix": "eslint --ext .ts,tsx,vue src/** --no-error-on-unmatched-pattern --fix",
     "mock": "cd mock && ts-node-dev mock.ts",
     "test": "jest",
     "test:unit": "jest --coverage",
-    "dev": "node /mock/mock.ts",
-    "build": "node /mock/mock.ts"
+    "build": "cd mock && ts-node-dev mock.ts"
   },
   "dependencies": {
     "@vercel/node": "^3.2.25",
