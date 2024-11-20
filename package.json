@@ -7,10 +7,11 @@
     "mock": "cd mock && ts-node-dev mock.ts",
     "test": "jest",
     "test:unit": "jest --coverage",
-    "dev": "cd mock && ts-node-dev mock.ts",
-    "build": "cd mock && ts-node-dev mock.ts"
+    "dev": "node /mock/mock.ts",
+    "build": "node /mock/mock.ts"
   },
   "dependencies": {
+    "@vercel/node": "^3.2.25",
     "better-sqlite3": "^9.4.3",
     "bignumber.js": "^9.1.2",
     "chalk": "4.1.2",
