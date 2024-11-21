@@ -8,8 +8,8 @@ import { RouteMeta, PathMeta } from './type'
 import Router from 'koa-router'
 
 const addRouter = (router: Router) => {
-  // 读取controller文件夹，获取文件
-  const ctrPath = path.join(__dirname, 'controller')
+  // 读取controller文件夹，获取文件 __dirname
+  const ctrPath = path.join(process.cwd(), 'controller')
   console.log('path---------', ctrPath)
   const modules: ObjectConstructor[] = []
   // 扫描controller文件夹，收集所有controller
