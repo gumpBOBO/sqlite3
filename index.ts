@@ -8,8 +8,8 @@ import cors from 'koa2-cors'
 import logger from 'koa-logger'
 import log4js from 'log4js'
 
-import addRouter from './mock/router'
-import { ResultHandler } from './mock/middleware/resultHandler'
+import addRouter from './router'
+import { ResultHandler } from './middleware/resultHandler'
 
 const app = new Koa()
 // 跨域

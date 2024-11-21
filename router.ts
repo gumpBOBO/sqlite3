@@ -10,6 +10,7 @@ import Router from 'koa-router'
 const addRouter = (router: Router) => {
   // 读取controller文件夹，获取文件
   const ctrPath = path.join(__dirname, 'controller')
+  console.log('path---------', ctrPath)
   const modules: ObjectConstructor[] = []
   // 扫描controller文件夹，收集所有controller
   fs.readdirSync(ctrPath).forEach(name => {
