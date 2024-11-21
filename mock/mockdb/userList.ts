@@ -1,4 +1,4 @@
-import { UserBean } from 'controller/type'
+import { UserBean } from '../controller/type'
 import faker from 'faker'
 
 const userList: UserBean[] = [

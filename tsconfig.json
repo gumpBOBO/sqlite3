@@ -2,9 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "tslib": ["node_modules/tslib/tslib.d.ts"]
+      "tslib": ["./node_modules/tslib/tslib.d.ts"]
     },
-    "outDir": "./dist",
+    "outDir": "./pubilc",
     "module": "commonjs",
     "target": "esnext",
     "allowSyntheticDefaultImports": true,
@@ -30,6 +30,6 @@
     "allowJs": true,
     "sourceMap": true
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["**/*.ts", "**/*.tsx", "*.ts"],
+  "exclude": ["node_modules", "pubilc"]
 }
