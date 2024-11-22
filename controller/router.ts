@@ -3,13 +3,14 @@
 import 'reflect-metadata'
 import fs from 'fs'
 import path from 'path'
-import { ROUTER_MAP, BASE_PATH_MAP } from './constant'
-import { RouteMeta, PathMeta } from './type'
+import { ROUTER_MAP, BASE_PATH_MAP } from '../constant'
+import { RouteMeta, PathMeta } from '../type'
 import Router from 'koa-router'
 
 const addRouter = (router: Router) => {
   // 读取controller文件夹，获取文件 __dirname
-  const ctrPath = path.join(process.cwd(), './controller')
+  // const ctrPath = path.join(process.cwd(), './controller')
+  const ctrPath = path.join(__dirname)
   console.log('path---------', ctrPath)
   const modules: ObjectConstructor[] = []
   // 扫描controller文件夹，收集所有controller
