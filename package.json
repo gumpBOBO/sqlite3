@@ -4,10 +4,10 @@
   "scripts": {
     "lint": "eslint --ext .ts,tsx,vue src/** --no-error-on-unmatched-pattern --quiet",
     "lint:fix": "eslint --ext .ts,tsx,vue src/** --no-error-on-unmatched-pattern --fix",
-    "mock": "ts-node-dev index.ts",
+    "mock": "cd api && ts-node-dev index.ts",
     "test": "jest",
     "test:unit": "jest --coverage",
-    "build": "node index.ts"
+    "build": "cd api && node index.ts"
   },
   "dependencies": {
     "@vercel/node": "^3.2.25",

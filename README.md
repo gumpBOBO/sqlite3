@@ -16,9 +16,28 @@ vue3_vite_better_sqlite3
 
 #### 使用说明
 
-1.  x
-2.
-3.
+​	vercel.json
+
+```js
+// {
+//   "version": 2,
+//   "builds": [
+//     {
+//       "src": "./index.ts",
+//       "use": "@vercel/node"
+//     }
+//   ],
+//   "routes": [
+//     {
+//       "src": "/(.*)",
+//       "dest": "index.ts",
+//       "methods": ["GET", "POST", "PUT", "DELETE"]
+//     }
+//   ]
+// }
+```
+
+
 
 #### 参与贡献
 
