@@ -12,14 +12,21 @@ import addRouter from './controller/router'
 import { ResultHandler } from './middleware/resultHandler'
 
 const app = new Koa()
-// 跨域
-app.use(cors())
 const router = new koaRouter()
 
 // 接口 3300
 const port = 3008
 const log4 = log4js.getLogger()
 log4.level = 'debug'
+
+// 跨域
+app.use(cors())
+app.use(koaBody())
+//启动路由
+app.use(router.routes()).use(router.allowedMethods())
+
+//加载路由
+addRouter(router)
 
 //日志打印
 app.use(
@@ -28,7 +35,7 @@ app.use(
   })
 )
 
-app.use(koaBody())
+app.use(ResultHandler())
 
 app.use(async (ctx, next) => {
   // console.log('koa2----', ctx)
@@ -39,12 +46,6 @@ app.use(async (ctx, next) => {
   log4.debug(chalk.blue('请求body:  ') + JSON.stringify(ctx.request.body))
   log4.debug(chalk.blue('返回数据:  ') + JSON.stringify(ctx.body))
 })
-
-app.use(ResultHandler())
-//加载路由
-addRouter(router)
-//启动路由
-app.use(router.routes()).use(router.allowedMethods())
 
 app.use(async (ctx: Context) => {
   log4.error(`404 ${ctx.message} : ${ctx.href}`)

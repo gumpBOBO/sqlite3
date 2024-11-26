@@ -30,7 +30,7 @@ function createClassDecorator() {
     return (proto: any) => {
       const target = proto
       const pathMap = Reflect.getMetadata(BASE_PATH_MAP, target) || []
-      // console.log('类路径装饰器----', basePath)
+      console.log('类路径装饰器----', basePath)
       pathMap.push({ path: basePath })
       Reflect.defineMetadata(BASE_PATH_MAP, pathMap, target)
     }

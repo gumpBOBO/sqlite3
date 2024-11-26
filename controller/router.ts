@@ -31,6 +31,8 @@ const addRouter = (router: Router) => {
         // const {name, method, path, isVerify} = route;
         const { name, method, path } = route
         const newPath: string = basePath ? basePath.path + path : path
+        console.log('newPath----', newPath)
+        console.log('name----', name)
         // router[method](newPath, jwt(newPath, isVerify), ctr[name]);
         router[method](newPath, ctr[name])
       })

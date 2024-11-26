@@ -7,7 +7,7 @@
     "mock": "ts-node-dev index.ts",
     "test": "jest",
     "test:unit": "jest --coverage",
-    "build": "@vercel/node index.ts"
+    "build": "node index.ts"
   },
   "dependencies": {
     "@vercel/node": "^3.2.25",
