@@ -4,7 +4,7 @@ import 'reflect-metadata'
 import fs from 'fs'
 import path from 'path'
 import { ROUTER_MAP, BASE_PATH_MAP } from '../constant'
-import { RouteMeta, PathMeta } from '../type'
+import { RouteMeta, PathMeta } from '../../type'
 import Router from 'koa-router'
 
 const addRouter = (router: Router) => {

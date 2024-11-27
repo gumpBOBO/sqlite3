@@ -1,5 +1,5 @@
 import log from '../utils/logger'
-import { MiddleWare } from '../type'
+import { MiddleWare } from '../../type'
 
 // 返回结果json的申明
 export type ResultInfo = {

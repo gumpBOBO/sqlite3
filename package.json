@@ -4,10 +4,10 @@
   "scripts": {
     "lint": "eslint --ext .ts,tsx,vue src/** --no-error-on-unmatched-pattern --quiet",
     "lint:fix": "eslint --ext .ts,tsx,vue src/** --no-error-on-unmatched-pattern --fix",
-    "mock": "cd api && ts-node-dev index.ts",
+    "mock": "ts-node-dev index.ts",
     "test": "jest",
     "test:unit": "jest --coverage",
-    "build": "cd api && node index.ts"
+    "build": "node index.ts"
   },
   "dependencies": {
     "@vercel/node": "^3.2.25",
@@ -38,7 +38,7 @@
     "@types/koa-logger": "^3.1.2",
     "@types/koa-router": "^7.4.4",
     "@types/koa2-cors": "^2.0.2",
-    "@types/node": "^18.15.9",
+    "@types/node": "^18.19.66",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "babel-jest": "26.6.3",

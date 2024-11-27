@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    // "baseUrl": ".",
     "paths": {
       "tslib": ["./node_modules/tslib/tslib.d.ts"]
     },
@@ -30,6 +29,6 @@
     "allowJs": true,
     "sourceMap": true
   },
-  "include": ["**/*.ts", "**/*.tsx", "*.ts"],
+  "include": ["**/*.ts", "**/*.tsx", "*.ts", "**/**/*.ts"],
   "exclude": ["node_modules", "pubilc"]
 }
