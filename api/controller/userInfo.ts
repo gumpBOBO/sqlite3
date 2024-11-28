@@ -1,6 +1,6 @@
 import { prefix, get, post } from '../requestDecorator'
 import { handleSearchPage, handleEdit, handleAdd, handleDelete, handleSearchAll } from '../mockdb/userInfo'
-@prefix('/userInfo')
+@prefix('/api/userInfo')
 export default class GoodsClass {
   // 查询
   @get('/queryList')
